@@ -1,50 +1,93 @@
 # Online Store API
 
-A production-ready REST API for an online store, built with **Node.js**, **Express**, **MongoDB**, and **Docker**.  
-This project demonstrates backend development skills together with practical DevOps practices such as containerization and CI.
+Online Store API is a RESTful backend service for an e-commerce platform.  
+It provides endpoints for managing users, authentication, products, and orders, and is designed to be scalable, secure, and easy to deploy.
+
+The application is containerized using Docker and can be run locally or on any Linux server.
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
-> 🚧 **Live demo ...........**  
+ 
 > The API will be deployed to an online Linux server using Docker Compose.  
 > This section will be updated with a public URL.
 
-Planned endpoints:
-- Swagger UI: `/api/docs`
-- Health check: `/health`
+Planned public endpoints:
+- `/api/docs` – API documentation (Swagger)
+- `/health` – Service health check
 
 ---
 
-## 🚀 Features
+##  What This Application Does
 
-- JWT authentication
+This API represents the backend of an online store and supports the following core features:
+
+### Authentication & Users
+- User registration and login
+- JWT-based authentication
 - Role-based access control (user / admin)
-- Products, Orders, and Users APIs
+- Protected routes for authenticated users
+
+### Products
+- Create, read, update, and delete products
 - Pagination and filtering
-- Centralized error handling
-- Swagger / OpenAPI documentation
-- Automated tests with Jest
-- CI with GitHub Actions
-- Docker & Docker Compose (API + MongoDB)
-- Health check endpoint for deployments
+- Public product listing
+- Admin-only product management
+
+### Orders
+- Create orders for authenticated users
+- View user orders
+- Admin access to all orders
+
+### API Documentation
+- Interactive API documentation using Swagger
+- JSON schema available for integration with other services
 
 ---
 
-## 🛠 Tech Stack
+##  How the Application Works
 
-- **Backend:** Node.js, Express
-- **Database:** MongoDB (Mongoose)
-- **Authentication:** JWT
-- **Testing:** Jest, Supertest
-- **API Docs:** Swagger (OpenAPI)
-- **DevOps:** Docker, Docker Compose, GitHub Actions
+1. The client sends HTTP requests to the API
+2. Requests are validated and authenticated using JWT
+3. Business logic is handled in controllers
+4. Data is stored in MongoDB using Mongoose models
+5. Errors are handled centrally and returned in a consistent format
+
+The application follows a modular structure with clear separation between routes, controllers, models, and utilities.
 
 ---
 
-## 📦 Project Structure
+## Technologies Used
 
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+- Mongoose ODM
+
+### Authentication & Security
+- JSON Web Tokens (JWT)
+- Password hashing with bcrypt
+
+### Documentation
+- Swagger (OpenAPI)
+
+### Testing
+- Jest
+- Supertest
+- mongodb-memory-server (for isolated tests)
+
+### DevOps & Tooling
+- Docker
+- Docker Compose
+- GitHub Actions (CI)
+
+---
+
+## Project Structure
 ```
 .
 ├── app.js
@@ -63,7 +106,7 @@ Planned endpoints:
 
 ---
 
-## ▶️ Run Locally with Docker (Recommended)
+## Run Locally with Docker (Recommended)
 
 ### Prerequisites
 - Docker
@@ -81,7 +124,7 @@ docker compose up --build
 
 ---
 
-## 🌍 Access the API
+## Access the API
 
 Once running, the API is available at:
 
@@ -91,7 +134,7 @@ Once running, the API is available at:
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 Create a `.env` file based on `.env.example`.
 
@@ -109,7 +152,7 @@ JWT_EXPIRES_IN=7d
 
 ---
 
-## 🧪 Run Tests
+##  Run Tests
 
 ```bash
 npm install
@@ -120,7 +163,7 @@ Tests are also executed automatically in **GitHub Actions** on every push.
 
 ---
 
-## 📖 API Documentation
+## API Documentation
 
 Swagger UI:
 ```
@@ -134,7 +177,7 @@ Swagger JSON:
 
 ---
 
-## 🩺 Health Check
+## Health Check
 
 ```http
 GET /health
@@ -149,22 +192,10 @@ Response:
 
 This endpoint is used for container health checks and production deployments.
 
----
-
-## 🧠 Why This Project
-
-This project was built to demonstrate:
-
-- Clean REST API design
-- Secure authentication using JWT
-- Error handling and validation
-- Automated testing
-- Containerization with Docker
-- Running backend services in a production-like environment
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 The application is designed to be deployed on any Linux server that supports Docker.
 
@@ -178,7 +209,7 @@ A live deployment ............
 
 ---
 
-## 📌 Notes
+## Notes
 
 - Environment variables are not committed to the repository.
 - The application can run anywhere Docker is available.
