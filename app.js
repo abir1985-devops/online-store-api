@@ -16,6 +16,10 @@ app.use(morgan('dev'));
 app.get('/', (req, res) => {
   res.send('Online Store API running');
 });
+/* ✅ HEALTH CHECK  */
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
 
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
