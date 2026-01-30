@@ -10,12 +10,12 @@ The application is containerized using Docker and can be run locally or on any L
 ##  Live Demo
 
  
-> The API will be deployed to an online Linux server using Docker Compose.  
-> This section will be updated with a public URL.
+>## 🌐 Live Demo
 
-Planned public endpoints:
-- `/api/docs` – API documentation (Swagger)
-- `/health` – Service health check
+- API: http://82.165.138.175:3000
+- Swagger UI: http://82.165.138.175:3000/api/docs
+- Health Check: http://82.165.138.175:3000/health
+
 
 ---
 
