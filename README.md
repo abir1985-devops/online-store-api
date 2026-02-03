@@ -205,7 +205,13 @@ Typical deployment flow:
 3. Clone this repository
 4. Run `docker compose up -d`
 
-A live deployment ............
+A live deployment 
+
+- **Base URL:** http://localhost:3000  
+- **Swagger UI:** http://localhost:3000/api/docs  
+- **Health Check:** http://localhost:3000/health  
+
+---
 
 ---
 
